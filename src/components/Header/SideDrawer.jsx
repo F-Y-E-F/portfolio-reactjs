@@ -2,56 +2,49 @@ import React from "react";
 
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+
+
+import styles from './SideDrawer.module.css'
 
 const SideDrawer = (props) => {
-
   const list = () => (
     <div
       role="presentation"
-      onClick={props.toggleDrawer(false)}
-      onKeyDown={props.toggleDrawer(false)}
+      onClick={props.closeDrawer()}
+      onKeyDown={props.closeDrawer()}
     >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+      <List className={styles.menuWrapper}>
+          {[
+            {
+              title: "Home"
+            },
+            {
+              title: "Portfolio"
+            },
+            {
+              title: "Resume"
+            },
+            {
+              title: "About"
+            },
+            {
+              title: "Contact"
+            },
+          ].map((menuItem) => <span className={styles.menuItem} key={menuItem.title}>{menuItem.title.toUpperCase()}</span>)}
+        
       </List>
     </div>
   );
 
   return (
-
-      <SwipeableDrawer
-        anchor={"top"}
-        open={props.isDrawerOpen}
-        onClose={props.toggleDrawer(false)}
-        onOpen={props.toggleDrawer(true)}
-      >
-        {list()}
-      </SwipeableDrawer>
-
+    <SwipeableDrawer
+      anchor={"top"}
+      open={props.isDrawerOpen}
+      onClose={props.closeDrawer()}
+      onOpen={props.openDrawer()}
+    >
+      {list()}
+    </SwipeableDrawer>
   );
 };
 

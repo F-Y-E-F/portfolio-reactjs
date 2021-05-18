@@ -1,0 +1,18 @@
+
+.menuItem{
+    color: black;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-left:15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.menuWrapper{
+    display: flex;
+    flex-direction: column;
+    
+}

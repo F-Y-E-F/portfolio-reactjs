@@ -1,22 +1,14 @@
-import "./App.css";
+import styles from "./App.module.css";
 import Header from "./components/Header/Header";
+import Title from "./components/UI/Title";
+import AppsGrid from "./components/AppsGrid/AppsGrid";
 
 function App() {
   return (
-    <div>
+    <div className={styles.rootElement}>
       <Header />
-      fojwoefjo jf ow o<br/>
-      f<br/>
-       wd<br/>
-       f wd<br/>
-       f <br/>
-       wd<br/>
-       f we<br/>
-       f w<br/>
-       edf <br/>
-       we<br/>
-        w<br/>
-        we
+      <Title whiteText="Featured" orangeText="Portfolio"/>
+      <AppsGrid/>
     </div>
   );
 }

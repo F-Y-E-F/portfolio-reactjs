@@ -8,15 +8,13 @@ const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleOpenDrawer = (isOpen) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
+    if (event &&event.type === "keydown" &&(event.key === "Tab" || event.key === "Shift")) {
       return;
     }
     setIsDrawerOpen(isOpen);
   };
+
+  
 
   return (
     <div className={styles.wrapper}>
@@ -29,9 +27,16 @@ const Header = () => {
           >
             <MenuIcon className={styles.menuIcon} />
           </IconButton>
+          <span className={styles.title}>
+            Menu
+          </span>
         </Toolbar>
       </AppBar>
-      <SideDrawer toggleDrawer={(value) => toggleOpenDrawer(value)} isDrawerOpen={isDrawerOpen} />
+      <SideDrawer
+        closeDrawer={() => toggleOpenDrawer(false)}
+        openDrawer={() => toggleOpenDrawer(true)}
+        isDrawerOpen={isDrawerOpen}
+      />
       <header className={styles.header}>
         <span>HOME</span>
         <span>PORTFOLIO</span>

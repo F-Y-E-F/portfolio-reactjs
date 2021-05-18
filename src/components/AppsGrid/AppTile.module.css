@@ -1,0 +1,41 @@
+.appTileWrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transition-duration: 0.7s;
+}
+
+.appTileWrapper:hover {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  filter: brightness(50%);
+  transition-duration: 0.7s;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.image:hover {
+  cursor: pointer;
+}
+
+.button {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+}
+
