@@ -9,9 +9,8 @@ import AppTile from "./AppTile";
 import styles from "./AppsGrid.module.css";
 
 const FlexibleGrid = makeResponsive(measureItems(CSSGrid), {
-  maxWidth: 1100,
+  maxWidth: 1400,
   minPadding: 30,
-
 });
 
 const AppsGrid = () => {
@@ -23,14 +22,14 @@ const AppsGrid = () => {
           component="ul"
           columns={3}
           columnWidth={300}
-          gutterWidth={30}
-          gutterHeight={30}
+          gutterWidth={100}
+          gutterHeight={10}
           layout={layout.pinterest}
           duration={400}
           easing="ease-out"
         >
           {state.map((datum) => (
-            <li key={datum} itemHeight={300}>
+            <li key={datum}>
               <AppTile orangeText={datum} whiteText={datum} />
             </li>
           ))}
