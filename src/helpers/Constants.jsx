@@ -1,52 +1,97 @@
-const allApps = [
-    {
-      name: "Imagine",
-      year: 2020,
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
-      githubUrl: "https://github.com/F-Y-E-F/Imagine",
-      lang: "Kotlin",
-    },
-    {
-      name: "fhdfdsf",
-      year: 2020,
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
-      githubUrl: "https://github.com/F-Y-E-F/Imagine",
-      lang: "Flutter",
-    },
-    {
-      name: "rwerwe",
-      year: 2020,
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
-      githubUrl: "https://github.com/F-Y-E-F/Imagine",
-      lang: "React",
-    },
-    {
-      name: "Imagrwerwerweine",
-      year: 2020,
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
-      githubUrl: "https://github.com/F-Y-E-F/Imagine",
-      lang: "Kotlin",
-    },
-    {
-      name: "fhdfrwerwerwedsf",
-      year: 2020,
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
-      githubUrl: "https://github.com/F-Y-E-F/Imagine",
-      lang: "Flutter",
-    },
-    {
-      name: "fsdgerwwerwesd",
-      year: 2020,
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
-      githubUrl: "https://github.com/F-Y-E-F/Imagine",
-      lang: "React",
-    },
-  ]
+export const allApps = [
+  {
+    name: "Imagine",
+    year: 2020,
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
+    githubUrl: "https://github.com/F-Y-E-F/Imagine",
+    lang: "Kotlin",
+  },
+  {
+    name: "fhdfdsf",
+    year: 2020,
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
+    githubUrl: "https://github.com/F-Y-E-F/Imagine",
+    lang: "Flutter",
+  },
+  {
+    name: "rwerwe",
+    year: 2020,
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
+    githubUrl: "https://github.com/F-Y-E-F/Imagine",
+    lang: "React",
+  },
+  {
+    name: "Imagrwerwerweine",
+    year: 2020,
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
+    githubUrl: "https://github.com/F-Y-E-F/Imagine",
+    lang: "Kotlin",
+  },
+  {
+    name: "fhdfrwerwerwedsf",
+    year: 2020,
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
+    githubUrl: "https://github.com/F-Y-E-F/Imagine",
+    lang: "Flutter",
+  },
+  {
+    name: "fsdgerwwerwesd",
+    year: 2020,
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg",
+    githubUrl: "https://github.com/F-Y-E-F/Imagine",
+    lang: "React",
+  },
+];
 
-  export default allApps;
+export const resumeEducation = [
+  {
+    date: "May 2020",
+    title: "3-rd place in hack heroes competition",
+    subTitle:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    url: "http://hackheroes.pl",
+  },
+  {
+    date: "May 2020",
+    title: "3-rd place in hack heroes competition2",
+    subTitle:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    url: "http://hackheroes.pl",
+  },
+  {
+    date: "May 2020",
+    title: "3-rd place in hack heroes competition3",
+    subTitle:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    url: "http://hackheroes.pl",
+  },
+];
+export const resumeExperience = [
+  {
+    date: "May 2020",
+    title: "3-rd place in hack heroes competition",
+    subTitle:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    url: "http://hackheroes.pl",
+  },
+  {
+    date: "May 2020",
+    title: "3-rd place in hack heroes competition2",
+    subTitle:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    url: "http://hackheroes.pl",
+  },
+  {
+    date: "May 2020",
+    title: "3-rd place in hack heroes competition3",
+    subTitle:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    url: "http://hackheroes.pl",
+  },
+];

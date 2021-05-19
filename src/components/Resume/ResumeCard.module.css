@@ -1,0 +1,49 @@
+.rootCardEl{
+    background-color: rgb(32, 32, 32);
+    height: auto;
+    border-radius: 3px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 25px;
+    padding-top: 35px;
+}
+
+.dateContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.date{
+    color: white;
+    size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.title{
+    color: #fca311;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.subtitle{
+    color: gray;
+    margin-top: 10px;
+    padding: 0px !important;
+    letter-spacing: 0.5px;
+}
+
+.subtitleCheck{
+    color: #ADADAD;
+    margin-top: 10px;
+    size: 12px;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}

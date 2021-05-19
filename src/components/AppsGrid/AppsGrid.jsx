@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import allApps from '../../helpers/Constants'
+import {allApps} from '../../helpers/Constants'
 import {
   CSSGrid,
   layout,
@@ -58,6 +58,7 @@ const AppsGrid = () => {
           layout={layout.pinterest}
           duration={400}
           easing="ease-out"
+          className={styles.noneListStyle}
         >
           {apps.map((app) => {
             return (
