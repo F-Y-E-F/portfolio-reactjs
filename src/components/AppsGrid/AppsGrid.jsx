@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import allApps from '../../helpers/Constants'
 import {
   CSSGrid,
   layout,
@@ -13,10 +14,40 @@ const FlexibleGrid = makeResponsive(measureItems(CSSGrid), {
   minPadding: 30,
 });
 
+
+
 const AppsGrid = () => {
-  const [state, setstate] = useState(["A", "B", "C", "D", "E", "F"]);
+  const [apps, setApps] = useState(allApps);
+
+  const [curLang, setCurLang] = useState("All");
+
+  const changeLangHandler = (lang) => {
+    setCurLang(lang);
+    if(lang==="All") {
+      setApps(allApps)
+      return
+    }
+    var appsToShow = allApps.filter((app)=>{
+      return app.lang === lang
+    })
+    setApps(appsToShow)
+  };
+
   return (
     <div>
+      <div className={styles.languagesWrapper}>
+        {["All", "Kotlin", "Flutter", "React"].map((lang) => {
+          return (
+            <span
+            key={lang}
+              className={curLang === lang ? styles.curLang : styles.lang}
+              onClick={() => changeLangHandler(lang)}
+            >
+              {lang}
+            </span>
+          );
+        })}
+      </div>
       <div className={styles.gridWrapper}>
         <FlexibleGrid
           component="ul"
@@ -28,29 +59,14 @@ const AppsGrid = () => {
           duration={400}
           easing="ease-out"
         >
-          {state.map((datum) => (
-            <li key={datum}>
-              <AppTile orangeText={datum} whiteText={datum} />
-            </li>
-          ))}
+          {apps.map((app) => {
+            return (
+              <li key={app.name}>
+                <AppTile name={app.name} imageUrl={app.imageUrl} year={app.year} projectUrl={app.githubUrl}/>
+              </li>
+            );
+          })}
         </FlexibleGrid>
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            setstate(["D", "F"]);
-          }}
-        >
-          KLIKEJ MNIE CWELU
-        </button>
-
-        <button
-          onClick={() => {
-            setstate(["A", "B", "C", "D", "E", "F"]);
-          }}
-        >
-          KLIKEJ MNIE CWELU
-        </button>
       </div>
     </div>
   );

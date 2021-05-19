@@ -8,21 +8,22 @@ const AppTile = (props) => {
     <div className={styles.allTile}>
       <div
         className={styles.appTileWrapper}
-        onMouseOver={() => setIsHover(true)}
-        onMouseOut={() => setIsHover(false)}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
       >
+        
         <div className={!isHover? styles.shadow : styles.shadowHover}></div>
         <img
-          src="https://cdn.pixabay.com/photo/2020/08/01/12/18/winnats-pass-5455266_960_720.jpg"
+          src={props.imageUrl}
           className={styles.image}
-          alt="App"
+          alt={props.name}
         />
-        <button className={!isHover ? styles.button : styles.buttonHover}>
+        <button className={!isHover ? styles.button : styles.buttonHovered} onClick={()=> window.open(props.projectUrl, "_blank")}>
           Check this out
         </button>
       </div>
-      <div className={styles.appName}>Imagine</div>
-      <div className={styles.appYear}>2020</div>
+      <div className={styles.appName}>{props.name}</div>
+      <div className={styles.appYear}>{props.year}</div>
     </div>
   );
 };
