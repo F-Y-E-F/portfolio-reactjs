@@ -68,27 +68,27 @@
 }
 
 .button {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    transition-duration: 0.7s;
-    margin-top: auto;
-    margin-bottom: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    cursor: pointer;
-    text-align: center;
-    border: 3px solid white;
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.1);
-    opacity: 0;
-    font-weight: 600;
-    color: white;
-    font-size: 17px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  transition-duration: 0.7s;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  font-weight: 600;
+  color: white;
+  font-size: 17px;
 }
 
 .buttonHovered {
@@ -109,17 +109,16 @@
   width: 200px;
   height: 50px;
   background-color: rgba(255, 255, 255, 0.1);
-  opacity: 1.0;
+  opacity: 1;
   font-weight: 600;
   color: white;
   font-size: 17px;
 }
 
+.buttonHovered:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
 
-.buttonHover:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  
 .appName {
   color: white;
   font-weight: 300;

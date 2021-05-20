@@ -22,7 +22,7 @@
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
     .resumeCardsContainer{
         display: flex;
         flex-wrap: wrap;
@@ -35,7 +35,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 90%;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
     }

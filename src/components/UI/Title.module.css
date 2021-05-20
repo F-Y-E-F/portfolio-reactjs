@@ -1,10 +1,17 @@
 .titleWrapper {
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-
+.startTitleWrapper{
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .orangeText {
   color: #fca311;
   font-weight: 800;

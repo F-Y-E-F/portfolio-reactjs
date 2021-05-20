@@ -3,7 +3,6 @@ import styles from "./ResumeCards.module.css";
 import ResumeCard from "./ResumeCard";
 import { resumeEducation, resumeExperience } from "../../helpers/Constants";
 const ResumeCards = () => {
-  console.log(resumeEducation);
   return (
     <div className={styles.resumeCardsContainer}>
       <div className={styles.categoryContainer}>

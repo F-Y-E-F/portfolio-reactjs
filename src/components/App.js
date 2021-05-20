@@ -3,6 +3,8 @@ import Header from "./Header/Header";
 import Title from "./UI/Title";
 import AppsGrid from "./AppsGrid/AppsGrid";
 import ResumeCards from "./Resume/ResumeCards";
+import About from "./About/About";
+import Services from "./Services/Services";
 
 function App() {
   return (
@@ -12,6 +14,9 @@ function App() {
       <AppsGrid/>
       <Title whiteText="My" orangeText="Resume"/>
       <ResumeCards/>
+      <About/>
+      <Title whiteText="My" orangeText="Services"/>
+      <Services/>
     </div>
   );
 }
