@@ -1,0 +1,100 @@
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.input {
+  background: rgb(32, 32, 32);
+  color: white;
+  width: 32vw;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px transparent solid;
+  transition-duration: 0.2s;
+  border-radius: 0px 3px;
+  margin: 5px 0px;
+}
+
+.input:focus {
+  border-bottom: 2px #fca311 solid;
+  transition-duration: 0.2s;
+  outline: none;
+}
+
+::placeholder {
+  font-family: "Lato";
+  color: rgb(128, 128, 128);
+  font-weight: 400;
+}
+
+.messageInput {
+  background: rgb(32, 32, 32);
+  color: white;
+  width: 32vw;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px transparent solid;
+  transition-duration: 0.2s;
+  border-radius: 0px 3px;
+  margin: 5px 0px;
+  resize: none;
+  overflow: hidden;
+  font-family: "Lato";
+}
+.messageInput:focus {
+  border-bottom: 2px #fca311 solid;
+  transition-duration: 0.2s;
+  outline: none;
+}
+
+
+#sendMessageButton {
+  background-color: #fca311;
+  border-radius: 200px;
+  padding: 15px 20px;
+  font-weight: 300;
+  margin-top: 30px;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  width: 200px;
+}
+#sendMessageButton:hover {
+  background-color: #ffb030;
+}
+
+@media (max-width: 700px) {
+
+  .input {
+    background: rgb(32, 32, 32);
+    color: white;
+    width: 80vw;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px transparent solid;
+    transition-duration: 0.2s;
+    border-radius: 0px 3px;
+    margin: 5px auto;
+  }
+  .messageInput {
+    background: rgb(32, 32, 32);
+    color: white;
+    width: 80vw;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px transparent solid;
+    transition-duration: 0.2s;
+    border-radius: 0px 3px;
+    margin: 5px 0px;
+    resize: none;
+    overflow: hidden;
+    font-family: "Lato";
+  }
+}

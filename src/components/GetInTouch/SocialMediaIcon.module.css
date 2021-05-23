@@ -1,0 +1,29 @@
+.wrapper{
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    transition-duration: .5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.wrapper:hover{
+    background-color:#fca211;
+    transition-duration: .5s;
+}
+
+
+@media (max-width: 700px) {
+    .wrapper{
+        width: 75px;
+        height: 75px;
+        border-radius: 70px;
+        background-color: rgb(32, 32, 32);
+        display: flex;
+        transition-duration: .5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+}
+  

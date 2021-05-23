@@ -95,3 +95,30 @@ export const resumeExperience = [
     url: "http://hackheroes.pl",
   },
 ];
+
+export const services = [
+  {
+    title: "Kotlin Support",
+    subTitle:
+      "I can create mobile apps or features in kotlin. Also I can join to already started project. I know basics of tean-work in git version control. I know MVVM architecture and a lot of firebase things.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+    onClickUrl: "https://google.com",
+  },
+  {
+    title: "Flutter Support",
+    subTitle:
+      "I can create mobile apps or features in kotlin. Also I can join to already started project. I know basics of tean-work in git version control. I know MVVM architecture and a lot of firebase things.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+    onClickUrl: "https://google.com",
+  },
+  {
+    title: "React Support",
+    subTitle:
+      "I can create mobile apps or features in kotlin. Also I can join to already started project. I know basics of tean-work in git version control. I know MVVM architecture and a lot of firebase things.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+    onClickUrl: "https://google.com",
+  },
+];

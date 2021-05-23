@@ -1,0 +1,86 @@
+
+.tileWrapper{
+    width: 18vw;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2px;
+    padding: 40px 10px;
+    margin: 0px 20px;
+
+}
+
+.imageWrapper{
+    width: 120px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fca311;
+    border-radius: 200px;
+
+}
+
+.img{
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+}
+
+.title{
+    color: white;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.subTitle{
+    color: gray;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.checkThisOut{
+    color: #fca311;
+    font-weight: 300;
+    width: auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.checkIcon{
+    color: #fca311;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.grid{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:20px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media (max-width: 700px) {
+    .tileWrapper{
+        width: auto;
+        background-color: rgb(32, 32, 32);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 2px;
+        padding: 40px 10px;
+        margin: 20px 20px;
+
+    }
+  }
