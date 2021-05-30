@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "./Header.module.css";
 import SideDrawer from "./SideDrawer";
 
-const Header = () => {
+const Header = React.forwardRef((props,ref) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleOpenDrawer = (isOpen) => (event) => {
@@ -17,7 +17,7 @@ const Header = () => {
   
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} ref={ref}>
       <AppBar className={styles.mobileHeader} style={{ background: "#ffffff" }}>
         <Toolbar>
           <IconButton
@@ -36,13 +36,14 @@ const Header = () => {
         closeDrawer={() => toggleOpenDrawer(false)}
         openDrawer={() => toggleOpenDrawer(true)}
         isDrawerOpen={isDrawerOpen}
+        onChooseOptionHandler={props.onScrollHandler}
       />
       <header className={styles.header}>
-        <span>HOME</span>
-        <span>PORTFOLIO</span>
-        <span>RESUME</span>
-        <span>ABOUT</span>
-        <span>CONTACT</span>
+        <span onClick={()=>props.onScrollHandler("home")}>HOME</span>
+        <span onClick={()=>props.onScrollHandler("portfolio")}>PORTFOLIO</span>
+        <span onClick={()=>props.onScrollHandler("resume")}>RESUME</span>
+        <span onClick={()=>props.onScrollHandler("about")}>ABOUT</span>
+        <span onClick={()=>props.onScrollHandler("contact")}>CONTACT</span>
       </header>
       <div className={styles.titles}>
         <span className={styles.helloText}>Hello, I'm</span>
@@ -51,5 +52,5 @@ const Header = () => {
       </div>
     </div>
   );
-};
+});
 export default Header;

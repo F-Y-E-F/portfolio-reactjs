@@ -4,8 +4,8 @@ import image from '../../assets/placeholder_two.jpg'
 import Title from '../UI/Title'
 import Button from '@material-ui/core/Button';
 
-const About = () =>{
-    return <div className={styles.aboutContainer}>
+const About = React.forwardRef((props,ref) =>{
+    return <div className={styles.aboutContainer} ref={ref}>
 
         <img src={image} alt="Me" className={styles.img}/>
         <div className={styles.aboutContentContainer}>
@@ -18,6 +18,6 @@ const About = () =>{
             </div>
         </div>
     </div>
-} 
+}) 
 
 export default About

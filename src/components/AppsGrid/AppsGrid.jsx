@@ -16,7 +16,7 @@ const FlexibleGrid = makeResponsive(measureItems(CSSGrid), {
 
 
 
-const AppsGrid = () => {
+const AppsGrid = React.forwardRef((props,ref) => {
   const [apps, setApps] = useState(allApps);
 
   const [curLang, setCurLang] = useState("All");
@@ -35,7 +35,7 @@ const AppsGrid = () => {
 
   return (
     <div>
-      <div className={styles.languagesWrapper}>
+      <div className={styles.languagesWrapper} ref={ref}>
         {["All", "Kotlin", "Flutter", "React"].map((lang) => {
           return (
             <span
@@ -71,6 +71,6 @@ const AppsGrid = () => {
       </div>
     </div>
   );
-};
+});
 
 export default AppsGrid;

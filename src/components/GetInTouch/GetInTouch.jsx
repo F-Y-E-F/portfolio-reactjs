@@ -11,7 +11,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import MailIcon from "@material-ui/icons/Mail";
 import discord from "../../assets/discord.svg";
 
-const GetInTouch = () => {
+const GetInTouch = React.forwardRef((props,ref) => {
   const firstLineImages = [
     <LinkedInIcon className={styles.image} />,
     <FacebookIcon className={styles.image} />,
@@ -22,20 +22,20 @@ const GetInTouch = () => {
     <TwitterIcon className={styles.image} />,
     <InstagramIcon className={styles.image} />,
     <MailIcon className={styles.image} />,
-    <img src={discord}  className={styles.dscImg}/>,
+    <img src={discord}  className={styles.dscImg} alt="dsc"/>,
   ];
 
   return (
-    <div className={styles.getInTouchWrapper}>
+    <div className={styles.getInTouchWrapper} ref={ref}>
         <div className={styles.socialWrapper}>
         <div className={styles.oneLineWrapper}>
           {firstLineImages.map((img) => (
-            <SocialMediaIcon image={img} />
+            <SocialMediaIcon image={img} key={Math.random().toString()}/>
           ))}
         </div>
         <div className={styles.oneLineWrapper}>
           {secondLineImages.map((img) => (
-            <SocialMediaIcon image={img} />
+            <SocialMediaIcon image={img} key={Math.random().toString()}/>
           ))}
         </div>
       </div>
@@ -43,6 +43,6 @@ const GetInTouch = () => {
       
     </div>
   );
-};
+});
 
 export default GetInTouch;

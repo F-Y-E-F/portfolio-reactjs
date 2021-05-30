@@ -2,11 +2,13 @@ import React from "react";
 
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
-
-
 import styles from './SideDrawer.module.css'
 
 const SideDrawer = (props) => {
+  const onChooseOption = (title) =>{
+    props.onChooseOptionHandler(title.toLowerCase(),true)
+  }
+
   const list = () => (
     <div
       role="presentation"
@@ -30,11 +32,13 @@ const SideDrawer = (props) => {
             {
               title: "Contact"
             },
-          ].map((menuItem) => <span className={styles.menuItem} key={menuItem.title}>{menuItem.title.toUpperCase()}</span>)}
+          ].map((menuItem) => <span className={styles.menuItem} key={menuItem.title} onClick={() => onChooseOption(menuItem.title)}>{menuItem.title.toUpperCase()}</span>)}
         
       </List>
     </div>
   );
+
+
 
   return (
     <SwipeableDrawer

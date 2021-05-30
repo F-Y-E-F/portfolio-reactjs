@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./ResumeCards.module.css";
 import ResumeCard from "./ResumeCard";
 import { resumeEducation, resumeExperience } from "../../helpers/Constants";
-const ResumeCards = () => {
+const ResumeCards = React.forwardRef((props,ref) => {
   return (
-    <div className={styles.resumeCardsContainer}>
+    <div className={styles.resumeCardsContainer} ref={ref}>
       <div className={styles.categoryContainer}>
         <span className={styles.categoryTitle}>Education</span>
         {resumeEducation.map((resume) => {
@@ -36,5 +36,5 @@ const ResumeCards = () => {
       </div>
     </div>
   );
-};
+});
 export default ResumeCards;
