@@ -1,105 +1,127 @@
 .wrapper {
-  width: 100%;
-  background-image: url("../../assets/placeholder.jpg");
-  height: 100vh;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 100px;
+    width: 100%;
+    background-image: url("../../assets/placeholder.jpg");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 100px;
+    animation: onLoad;
+    animation-duration: 1s;
 }
 
 .header {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  padding-top: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .mobileHeader {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .header span {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-bottom: 20px;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  transition-duration: 0.5s;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 .header span:hover {
-  color: #fca311;
-  transition-duration: 0.5s;
+    color: #fca311;
+    transition-duration: 0.5s;
 }
 
 .wrapper .titles {
-  display: flex;
-  margin: auto;
-  flex-direction: column;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    animation: onLoadTitles;
+    animation-duration: 1s;
 }
 
 .wrapper .titles span {
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
 }
 
 .wrapper .titles .helloText {
-  text-align: center;
-  font-size: 68px;
-  font-weight: 300;
+    text-align: center;
+    font-size: 68px;
+    font-weight: 300;
 }
 
 .wrapper .titles .nameText {
-  font-size: 68px;
-  font-weight: 700;
-  text-align: center;
+    font-size: 68px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .wrapper .titles .portfolioText {
-  padding-top: 30px;
-  font-size: 20px;
-  letter-spacing: 4px;
-  text-align: center;
-  font-weight: 300;
+    padding-top: 30px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: 300;
 }
 
 .menuIcon {
-  color: #121212;
+    color: #121212;
 }
 
-.title{
-  color: #000;
-  font-size: 18px;
-  padding-left: 5px;
+.title {
+    color: #000;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+@keyframes onLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes onLoadTitles {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 700px) {
-  .header {
-    display: none;
-  }
-  .mobileHeader {
-    visibility: visible;
-    background: #ffffff;
-  }
-
-  .wrapper .titles .nameText {
-    font-size: 52px;
-  }
-  .wrapper .titles .helloText {
-    font-size: 52px;
-  }
-  .wrapper .titles .portfolioText {
-    padding-top: 20px;
-    font-size: 20px;
-  }
+    .header {
+        display: none;
+    }
+    .mobileHeader {
+        visibility: visible;
+        background: #ffffff;
+    }
+    .wrapper .titles .nameText {
+        font-size: 52px;
+    }
+    .wrapper .titles .helloText {
+        font-size: 52px;
+    }
+    .wrapper .titles .portfolioText {
+        padding-top: 20px;
+        font-size: 20px;
+    }
 }

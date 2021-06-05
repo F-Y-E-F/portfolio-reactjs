@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {allApps} from '../../helpers/Constants'
+import { allApps } from '../../helpers/Constants'
 import {
   CSSGrid,
   layout,
@@ -8,6 +8,8 @@ import {
 } from "react-stonecutter";
 import AppTile from "./AppTile";
 import styles from "./AppsGrid.module.css";
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const FlexibleGrid = makeResponsive(measureItems(CSSGrid), {
   maxWidth: 1400,
@@ -16,18 +18,23 @@ const FlexibleGrid = makeResponsive(measureItems(CSSGrid), {
 
 
 
-const AppsGrid = React.forwardRef((props,ref) => {
+const AppsGrid = React.forwardRef((props, ref) => {
+
+  const [reference, inView] = useInView({
+    triggerOnce: true,
+  });
+
   const [apps, setApps] = useState(allApps);
 
   const [curLang, setCurLang] = useState("All");
 
   const changeLangHandler = (lang) => {
     setCurLang(lang);
-    if(lang==="All") {
+    if (lang === "All") {
       setApps(allApps)
       return
     }
-    var appsToShow = allApps.filter((app)=>{
+    var appsToShow = allApps.filter((app) => {
       return app.lang === lang
     })
     setApps(appsToShow)
@@ -39,7 +46,7 @@ const AppsGrid = React.forwardRef((props,ref) => {
         {["All", "Kotlin", "Flutter", "React"].map((lang) => {
           return (
             <span
-            key={lang}
+              key={lang}
               className={curLang === lang ? styles.curLang : styles.lang}
               onClick={() => changeLangHandler(lang)}
             >
@@ -48,7 +55,7 @@ const AppsGrid = React.forwardRef((props,ref) => {
           );
         })}
       </div>
-      <div className={styles.gridWrapper}>
+      <motion.div className={styles.gridWrapper} animate={{ opacity: inView ? 1 : 0, translateY: inView ? 0 : 200}} ref={reference} transition={{ duration: 1 }}>
         <FlexibleGrid
           component="ul"
           columns={3}
@@ -63,12 +70,12 @@ const AppsGrid = React.forwardRef((props,ref) => {
           {apps.map((app) => {
             return (
               <li key={app.name}>
-                <AppTile name={app.name} imageUrl={app.imageUrl} year={app.year} projectUrl={app.githubUrl}/>
+                <AppTile name={app.name} imageUrl={app.imageUrl} year={app.year} projectUrl={app.githubUrl} />
               </li>
             );
           })}
         </FlexibleGrid>
-      </div>
+      </motion.div>
     </div>
   );
 });

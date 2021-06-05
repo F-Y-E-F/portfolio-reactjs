@@ -1,44 +1,70 @@
 .gridWrapper {
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  min-height: 1000px;
-  margin-left: 20px;
-  margin-top: 40px;
-  justify-content: center;
-  flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    min-height: 1000px;
+    margin-left: 20px;
+    margin-top: 40px;
+    justify-content: center;
+    flex-direction: row;
+    animation-duration: 1s;
 }
 
-.noneListStyle{
-  list-style: none;
+@media (prefers-reduced-motion: no-preference) {
+    .square-animation {
+        animation: wipe-enter 1s 1;
+    }
 }
 
-
-.languagesWrapper{
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  margin-top: 30px;
-  justify-content: center;
-  flex-direction: row;
+@keyframes wipe-enter {
+    0% {
+        transform: scale(0, .025);
+    }
+    50% {
+        transform: scale(1, .025);
+    }
 }
 
-.languagesWrapper .lang{
-  color: white;
-  padding: 15px;
-  transition-duration: 0.3s;
-  font-size: 20px;
-  margin: 10px;
-  font-weight: 300;
-  cursor: pointer;
+.noneListStyle {
+    list-style: none;
 }
 
-.languagesWrapper .curLang{
-  color: #fca311;
-  padding: 15px;
-  font-size: 20px;
-  margin: 10px;
-  transition-duration: 0.3s;
-  font-weight: 300;
-  cursor: pointer;
+.languagesWrapper {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.languagesWrapper .lang {
+    color: white;
+    padding: 15px;
+    transition-duration: 0.3s;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.languagesWrapper .curLang {
+    color: #fca311;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px;
+    transition-duration: 0.3s;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+@keyframes onLoadAppsGrid {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
