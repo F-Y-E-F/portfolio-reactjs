@@ -101,6 +101,7 @@ export const services = [
     title: "Kotlin Support",
     subTitle:
       "I can create mobile apps or features in kotlin. Also I can join to already started project. I know basics of tean-work in git version control. I know MVVM architecture and a lot of firebase things.",
+    bigSubTitle: 'I can create mobile apps or features in kotlin. Also I can join to already started project. I know basics of team work in git version control. I can create kotlin apps with: hilt, koin DI,  Retrofit, Rxjava, Coroutines, Firebase : Auth,  Cloud Firestore, Realtime database, notifications, storage. I know Room database MVVM clean architecture model, basics of material design, integrations with android features and more.',
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
     onClickUrl: "https://google.com",
@@ -108,17 +109,19 @@ export const services = [
   {
     title: "Flutter Support",
     subTitle:
-      "I can create mobile apps or features in kotlin. Also I can join to already started project. I know basics of tean-work in git version control. I know MVVM architecture and a lot of firebase things.",
+      "I can create mobile, desktop, web apps in flutter from basics or join recently work. I know a lot of widgets and their applications. Also I can apply state management to app. Click here to more",
+    bigSubTitle: 'I can create mobile, desktop, web apps in flutter from basics or join recently work. I know a lot of widgets and their applications. Also I can apply state management to app. I\'m able to implementation a lof of features using firebase and another libraries from pub.dev. I can apply Providers state management in recently created app.',
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+      "https://iconape.com/wp-content/png_logo_vector/flutter.png",
     onClickUrl: "https://google.com",
   },
   {
     title: "React Support",
     subTitle:
-      "I can create mobile apps or features in kotlin. Also I can join to already started project. I know basics of tean-work in git version control. I know MVVM architecture and a lot of firebase things.",
+      "I can create simple web apps in react js. This portfolio is also made in this language. Also I can apply git to that technology. I know basics of hooks, functions and class-based components.",
+    bigSubTitle: 'I can create simple web apps in react js. This portfolio is also made in this language. Also I can apply git to that technology. I know basics of hooks, functions and class-based components. I created weather web apps wchich based on weatherdata api. Also I\'m still learning by watching tutorials/',
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png",
     onClickUrl: "https://google.com",
   },
 ];

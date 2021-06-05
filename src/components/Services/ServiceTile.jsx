@@ -15,7 +15,7 @@ const ServiceTile = (props) => {
       </div>
       <span className={styles.title}>{props.title}</span>
       <p className={styles.subTitle}>{props.subTitle}</p>
-      <Link to="/service">
+      <Link to="/service"  style={{ textDecoration: 'none' }}>
         <Grid
           container
           direction="row"

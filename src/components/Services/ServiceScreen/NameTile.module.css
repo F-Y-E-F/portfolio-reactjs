@@ -1,0 +1,21 @@
+.nameTileWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: 50px 70px;
+}
+
+.languageImage {
+  width: 100px;
+  height: 100px;
+}
+
+.name{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    letter-spacing: 2px;
+}
