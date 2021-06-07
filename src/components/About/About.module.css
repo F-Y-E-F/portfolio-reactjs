@@ -63,6 +63,7 @@
   font-size: 16px;
   letter-spacing: 1.5px;
   width: 150px;
+  animation-iteration-count: infinite;
 }
 #hireMeButton:hover {
   background-color: #ffb030;
@@ -98,8 +99,9 @@
     margin-left: 0px;
 
   }
-  
 }
+
+
 
 
 @media (max-width: 800px) {

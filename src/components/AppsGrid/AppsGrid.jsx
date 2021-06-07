@@ -20,12 +20,9 @@ const FlexibleGrid = makeResponsive(measureItems(CSSGrid), {
 
 const AppsGrid = React.forwardRef((props, ref) => {
 
-  const [reference, inView] = useInView({
-    triggerOnce: true,
-  });
+  const [reference, inView] = useInView({triggerOnce: true,});
 
   const [apps, setApps] = useState(allApps);
-
   const [curLang, setCurLang] = useState("All");
 
   const changeLangHandler = (lang) => {
@@ -55,7 +52,7 @@ const AppsGrid = React.forwardRef((props, ref) => {
           );
         })}
       </div>
-      <motion.div className={styles.gridWrapper} animate={{ opacity: inView ? 1 : 0, translateY: inView ? 0 : 200}} ref={reference} transition={{ duration: 1 }}>
+      <motion.div className={styles.gridWrapper} animate={{ opacity: inView ? 1 : 0, translateY: inView ? 0 : 200}} ref={reference} transition={{ duration: 1.5 }}>
         <FlexibleGrid
           component="ul"
           columns={3}

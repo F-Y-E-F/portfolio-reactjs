@@ -1,13 +1,13 @@
 .nameTileWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 50px 70px;
 }
 
 .languageImage {
   width: 100px;
-  height: 100px;
+  height: auto;
 }
 
 .name{

@@ -3,9 +3,25 @@ import styles from "./ServiceTile.module.css";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+
 const ServiceTile = (props) => {
+  const  getLangFromFullName = ()=>{
+      if(props.title==='Kotlin Support'){
+        return 'kotlin'
+      }
+      if(props.title==='Flutter Support'){
+        return 'flutter'
+      }
+      if(props.title==='React Support'){
+        return 'react'
+      }
+      return 'none'
+  }
+  const [reference, inView] = useInView({triggerOnce: true,});
   return (
-    <div className={styles.tileWrapper}>
+    <motion.div className={styles.tileWrapper} animate={{ opacity: inView ? 1 : 0, translateX: inView ? 0 : props.title === "Kotlin Support" ? 300: props.title === "Flutter Support" ? -300:600}} ref={reference} transition={{ duration: 1.5 }}>
       <div className={styles.imageWrapper}>
         <img
           src={props.image}
@@ -15,13 +31,12 @@ const ServiceTile = (props) => {
       </div>
       <span className={styles.title}>{props.title}</span>
       <p className={styles.subTitle}>{props.subTitle}</p>
-      <Link to="/service"  style={{ textDecoration: 'none' }}>
+      <Link to={"/service/"+getLangFromFullName()} style={{ textDecoration: 'none' }}>
         <Grid
           container
           direction="row"
           alignItems="center"
           className={styles.grid}
-          onClick={() => console.log("XD")}
         >
           <Grid item>
             <span className={styles.checkThisOut}>Check this out</span>
@@ -31,7 +46,7 @@ const ServiceTile = (props) => {
           </Grid>
         </Grid>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

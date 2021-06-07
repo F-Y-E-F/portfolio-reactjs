@@ -7,11 +7,12 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 .oneDivWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .optionsText {
   color: white;
@@ -51,4 +52,22 @@
     text-align: center;
     padding: 0px;
     cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .projectsWrapper {
+    position:static;
+    top: 50px;
+    right: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
 }

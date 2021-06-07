@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Projects.module.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import kotlin from '../../../assets/kotlin.png'
-import android from '../../../assets/android.png'
-import intellij from '../../../assets/intellij.png'
-import git from '../../../assets/git.png'
 import { Divider } from "@material-ui/core";
-const Projects = () => {
+const Projects = (props) => {
   const [isShowed, setIsShow] = useState({
     isTechShow: false,
     isProjectsShow: false,
@@ -37,10 +33,9 @@ const Projects = () => {
           }}
         />
         <div className={isShowed.isTechShow ? styles.showDiv : styles.hideDiv}>
-          <img src={kotlin} className={styles.techIcon} alt='z1'/>
-          <img src={android} className={styles.techIcon} alt='z2'/>
-          <img src={intellij} className={styles.techIcon} alt='z3'/>
-          <img src={git} className={styles.techIcon} alt='z4'/>
+          {props.technologies.map((technology)=>{
+            return <img src={technology.image} className={styles.techIcon} alt={technology.key} key={technology.key}/>
+          })}
         </div>
       </div>
       <div style={{ width: "50px" }} />
