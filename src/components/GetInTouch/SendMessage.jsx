@@ -22,7 +22,7 @@ const SendMessage = () => {
 
   const sendMessageToFirebase = async () => {
     try{
-      if(messageData.name!='' && messageData.email!='' && messageData.phone!='' && messageData.message!=''){
+      if(messageData.name!=='' && messageData.email!=='' && messageData.phone!=='' && messageData.message!==''){
         await db.collection('emails').add(messageData)
         setIsSuccess(true)
         return
@@ -43,7 +43,7 @@ const SendMessage = () => {
       </Snackbar>
       <Snackbar open={isError} autoHideDuration={6000} onClose={()=>setIsError(false)}>
         <Alert onClose={()=>setIsError(false)} severity="error">
-        {messageData.name!='' && messageData.email!='' && messageData.phone!='' && messageData.message!='' ?
+        {messageData.name!=='' && messageData.email!=='' && messageData.phone!=='' && messageData.message!=='' ?
             'An Error Occured. Try again!': 'Provide all data!'}
         </Alert>
       </Snackbar>

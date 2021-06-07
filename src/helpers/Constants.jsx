@@ -131,6 +131,24 @@ export const services = [
         image: git,
         key: 'git'
       }
+    ],
+    projects: [
+      {
+        name: 'Imagine',
+        url: 'https://github.com/F-Y-E-F/Imagine'
+      },
+      {
+        name: 'Currency Exchange',
+        url: 'https://github.com/F-Y-E-F/currency-exchange-app-in-kotlin'
+      },
+      {
+        name: 'Medled',
+        url: 'https://github.com/F-Y-E-F/medled'
+      },
+      {
+        name: 'Firebase Auth',
+        url: 'https://github.com/F-Y-E-F/All-Google-Firebase-Authenticate-Methods'
+      }
     ]
   },
   {
@@ -156,6 +174,24 @@ export const services = [
       {
         image: git,
         key: 'git'
+      }
+    ],
+    projects: [
+      {
+        name: 'Chess.io',
+        url: 'https://github.com/F-Y-E-F/chess.io'
+      },
+      {
+        name: 'Live Ride',
+        url: 'https://github.com/F-Y-E-F/Live-Ride-Flutter-App'
+      },
+      {
+        name: 'Medicine App',
+        url: 'https://github.com/F-Y-E-F/Medicine-App-In-Flutter'
+      },
+      {
+        name: 'Meme App',
+        url: 'https://github.com/F-Y-E-F/Meme-App-In-Flutter'
       }
     ]
 
@@ -183,7 +219,16 @@ export const services = [
         image: git,
         key: 'git'
       }
+    ],
+    projects: [
+      {
+        name: 'Weather App',
+        url: 'https://github.com/F-Y-E-F/WeatherApp'
+      },
+      {
+        name: 'Portfolio',
+        url: 'https://github.com/F-Y-E-F/portfolio-reactjs'
+      },
     ]
-
   },
 ];

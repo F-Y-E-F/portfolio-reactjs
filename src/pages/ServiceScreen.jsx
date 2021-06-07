@@ -40,7 +40,7 @@ const ServiceScreen = (props) => {
         </Modal>
         }
         <NameTile image={languageObj.image} />
-        <Projects technologies={languageObj.technologies} />
+        <Projects technologies={languageObj.technologies} projects={languageObj.projects}/>
         <div className={styles.descWrapper}>
             <span className={styles.orangeText}>{languageObj.title.split(" ")[0].toUpperCase()}</span>
             <span className={styles.whiteText}> SUPPORT<br />AND FULL APPS</span>

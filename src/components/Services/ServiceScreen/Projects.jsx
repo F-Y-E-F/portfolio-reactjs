@@ -33,8 +33,8 @@ const Projects = (props) => {
           }}
         />
         <div className={isShowed.isTechShow ? styles.showDiv : styles.hideDiv}>
-          {props.technologies.map((technology)=>{
-            return <img src={technology.image} className={styles.techIcon} alt={technology.key} key={technology.key}/>
+          {props.technologies.map((technology) => {
+            return <img src={technology.image} className={styles.techIcon} alt={technology.key} key={technology.key} />
           })}
         </div>
       </div>
@@ -55,17 +55,12 @@ const Projects = (props) => {
         <div
           className={isShowed.isProjectsShow ? styles.showDiv : styles.hideDiv}
         >
-            <p className={styles.projestTitle}>Jakas apka</p>
-            <Divider style={{background:'white'}}/>
-            <p className={styles.projestTitle}>Jakas apka</p>
-            <Divider style={{background:'white'}}/>
-            <p className={styles.projestTitle}>Jakas apka</p>
-            <Divider style={{background:'white'}}/>
-            <p className={styles.projestTitle}>Jakas apka</p>
-            <Divider style={{background:'white'}}/>
-            <p className={styles.projestTitle}>Jakas apka</p>
-            <Divider style={{background:'white'}}/>
-            
+          {props.projects.map((project) => {
+            return <React.Fragment key={project.url}>
+              <p className={styles.projestTitle} onClick={()=>window.open(project.url,"_blank")}>{project.name}</p>
+              <Divider style={{ background: 'white' }} />
+            </React.Fragment>
+          })}
         </div>
       </div>
       <div style={{ width: "50px" }} />
