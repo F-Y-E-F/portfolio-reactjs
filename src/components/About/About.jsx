@@ -13,8 +13,8 @@ const About = React.forwardRef((props, ref) => {
             <p className={styles.aboutTitle}>I'm 17yo ambitious kotlin, flutter and react developer who wants to get first job. I like programming, playing chess and also good tea</p>
             <p className={styles.aboutSubTitle}>I created a lot of kotlin and flutter apps. Also I made some apps in React. A few of that are avaiable on google play store. Ask me for more informations.</p>
             <div className={styles.buttonsContainer}>
-                <Button id={styles.hireMeButton}>Hire Me</Button>
-                <Button id={styles.visitGithubButton}>Visit My Github</Button>
+                <Button id={styles.hireMeButton} onClick={() => props.onScrollHandler("contact")}>Hire Me</Button>
+                <Button id={styles.visitGithubButton} onClick={()=>window.open("https://github.com/F-Y-E-F", "_blank")}>Visit My Github</Button>
             </div>
         </div>
     </div>

@@ -51,7 +51,7 @@ const HomePage = () => {
       <AppsGrid ref={portfolioRef} />
       <Title whiteText="My" orangeText="Resume" />
       <ResumeCards ref={resumeRef} />
-      <About ref={aboutRef} />
+      <About ref={aboutRef} onScrollHandler={scrollToItem}/>
       <Title whiteText="My" orangeText="Services" />
       <Services />
       <Title whiteText="Get" orangeText="In Touch" />
